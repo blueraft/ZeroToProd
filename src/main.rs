@@ -10,7 +10,7 @@ use zero2prod::{
 async fn main() -> std::io::Result<()> {
     // We are falling back to printing all spans at info-level or above
     // if the RUST_LOG environment variable has not been set.
-    let subscriber = get_subscriber("zero2prod".into(), "info".into());
+    let subscriber = get_subscriber("zero2prod".into(), "info".into(), std::io::stdout);
     init_subscriber(subscriber);
 
     let configuration = get_configuration().expect("Failed to read configuration");
