@@ -2,7 +2,6 @@ use crate::domain::{NewSubscriber, SubscriberEmail, SubscriberName};
 use actix_web::{web, HttpResponse};
 use chrono::Utc;
 use sqlx::PgPool;
-use unicode_segmentation::UnicodeSegmentation;
 use uuid::Uuid;
 
 #[derive(serde::Deserialize)]

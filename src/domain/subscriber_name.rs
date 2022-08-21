@@ -1,3 +1,4 @@
+#[allow(unused_imports)]
 use unicode_segmentation::UnicodeSegmentation;
 #[derive(Debug)]
 pub struct SubscriberName(String);
