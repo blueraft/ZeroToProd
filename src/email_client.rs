@@ -1,5 +1,4 @@
 use crate::domain::SubscriberEmail;
-use actix_web::http;
 use reqwest::Client;
 use secrecy::{ExposeSecret, Secret};
 pub struct EmailClient {
