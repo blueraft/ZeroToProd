@@ -21,7 +21,7 @@ impl EmailClient {
         let request_body = SendEmailRequest {
             from: self.sender.as_ref(),
             to: recipient.as_ref(),
-            subject: subject,
+            subject,
             html_body: html_content,
             text_body: text_content,
         };
@@ -42,7 +42,7 @@ impl EmailClient {
     ) -> Self {
         let http_client = Client::builder().timeout(timeout).build().unwrap();
         Self {
-            http_client: http_client,
+            http_client,
             base_url,
             sender,
             authorization_token,
